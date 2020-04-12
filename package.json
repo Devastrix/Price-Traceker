@@ -55,7 +55,7 @@
     "@types/selenium-webdriver": "^3.0.3",
     "@types/webpack": "^3.0.10",
     "@auth0/angular-jwt": "^2.0.0",
-    "bootstrap": "~3.3.7",
+    "bootstrap": "~3.4.1",
     "ngx-bootstrap": "^3.0.0",
     "bootstrap-sass": "~3.3.7",
     "font-awesome": ">=4.1.0",
