@@ -15,9 +15,6 @@ import path from 'path';
 import lusca from 'lusca';
 import config from './environment';
 import session from 'express-session';
-import connectMongo from 'connect-mongo';
-import mongoose from 'mongoose';
-var MongoStore = connectMongo(session);
 
 export default function(app) {
     var env = process.env.NODE_ENV;
@@ -54,11 +51,7 @@ export default function(app) {
     app.use(session({
         secret: config.secrets.session,
         saveUninitialized: true,
-        resave: false,
-        store: new MongoStore({
-            mongooseConnection: mongoose.connection,
-            db: 'price-tracker'
-        })
+        resave: false
     }));
 
     /**
